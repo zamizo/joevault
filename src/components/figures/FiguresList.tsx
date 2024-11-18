@@ -7,6 +7,7 @@ import { EditFigureForm } from './EditFigureForm';
 import { FigureFilters } from './FigureFilters';
 import { Allegiance, CollectionStatus } from '../../types';
 import { historicalFigures } from '../../data/figures';
+import placeholderImage from '@/assets/images/placeholder-figure.svg';
 
 type ViewMode = 'grid' | 'list';
 
@@ -41,7 +42,6 @@ export function FiguresList() {
           ukYear: hf["USA Year"],
           hasSwivel: hf["Has Swivel Arm"] || false,
           collectionStatus: 'Not Owned' as CollectionStatus,
-          photoUrl: hf["photoUrl"],
           isHistorical: true
         }))
     ];
@@ -67,7 +67,6 @@ export function FiguresList() {
       ukYear: historicalFigure.ukYear,
       hasSwivel: historicalFigure.hasSwivel,
       collectionStatus: 'Owned',
-      photoUrl: historicalFigure.photoUrl,
       hasFilecard: false,
       hasCardback: false,
       isMintOnCard: false,
@@ -101,6 +100,13 @@ export function FiguresList() {
 
   const handleEdit = (figure: any) => {
     setEditingFigure(figure);
+  };
+
+  const getFigureImage = (figure: any) => {
+    if (!figure.isHistorical && figure.photos && figure.photos.length > 0) {
+      return figure.photos[0];
+    }
+    return placeholderImage;
   };
 
   return (
@@ -200,13 +206,11 @@ export function FiguresList() {
                     {displayFigures.map((figure, idx) => (
                       <tr key={figure.id || `${figure.codeName}-${figure.version}-${idx}`}>
                         <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
-                          {figure.photoUrl && (
-                            <img
-                              src={figure.photoUrl}
-                              alt={figure.codeName}
-                              className="h-12 w-12 object-cover rounded"
-                            />
-                          )}
+                          <img
+                            src={getFigureImage(figure)}
+                            alt={figure.codeName}
+                            className="h-12 w-12 object-cover rounded"
+                          />
                         </td>
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-900">
                           {figure.codeName}
@@ -261,15 +265,13 @@ export function FiguresList() {
               key={figure.id || `${figure.codeName}-${figure.version}-${idx}`}
               className="relative bg-white rounded-lg shadow overflow-hidden"
             >
-              {figure.photoUrl && (
-                <div className="aspect-w-3 aspect-h-4">
-                  <img
-                    src={figure.photoUrl}
-                    alt={figure.codeName}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              )}
+              <div className="aspect-w-3 aspect-h-4">
+                <img
+                  src={getFigureImage(figure)}
+                  alt={figure.codeName}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="p-4">
                 <h3 className="text-lg font-medium text-gray-900">{figure.codeName}</h3>
                 <p className="text-sm text-gray-500">{figure.realName}</p>
