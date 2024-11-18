@@ -10,7 +10,7 @@ export const figures1983: FigureData[] = [
     "Version": "1.5",
     "USA Year": 1983,
     "Associated Vehicle": null,
-    "Filecard Character Information": "\"Venom\" laser pistol",
+    "Accessories": "\"Venom\" laser pistol",
     "Has Swivel Arm": true
   },
   {
@@ -22,7 +22,7 @@ export const figures1983: FigureData[] = [
     "Version": 1,
     "USA Year": 1983,
     "Associated Vehicle": "H.I.S.S. Tank",
-    "Filecard Character Information": "None",
+    "Accessories": "None",
     "Has Swivel Arm": true
   },
   {
@@ -34,7 +34,7 @@ export const figures1983: FigureData[] = [
     "Version": 1,
     "USA Year": 1983,
     "Associated Vehicle": null,
-    "Filecard Character Information": "High-Density laser gun, armed attache case",
+    "Accessories": "High-Density laser gun, armed attache case",
     "Has Swivel Arm": true
   },
   {
@@ -46,7 +46,7 @@ export const figures1983: FigureData[] = [
     "Version": "1 (Mail-in)",
     "USA Year": 1983,
     "Associated Vehicle": null,
-    "Filecard Character Information": "rocket launcher, missile backpack",
+    "Accessories": "rocket launcher, missile backpack",
     "Has Swivel Arm": true
   },
   {
@@ -58,115 +58,7 @@ export const figures1983: FigureData[] = [
     "Version": 1,
     "USA Year": 1983,
     "Associated Vehicle": "Skystriker",
-    "Filecard Character Information": "Helmet",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Airborne",
-    "Real Name": "Franklin E. Talltree",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "helmet, assault pack, XM-16 attack rifle",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Cover Girl",
-    "Real Name": "Courtney A. Krieger",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1983,
-    "Associated Vehicle": "Wolverine",
-    "Filecard Character Information": "None",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Doc",
-    "Real Name": "Carl W. Greer",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "helmet, stretcher, rescue flare launcher",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Duke",
-    "Real Name": "Conrad S. Hauser",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1 (Mail-in)",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "binoculars, helmet, assault pack, M-32 sub-machine gun",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Gung-Ho",
-    "Real Name": "Ettienne R. LaFitte",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "jungle pack, XM-76 grenade launcher",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Snow Job",
-    "Real Name": "Harlan W. Moore",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "skis, poles, XMLR-3A laser rifle, polar pack",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Torpedo",
-    "Real Name": "Lee R. Boudreaux",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "SCUBA tanks, swim fins, harpoon rifle",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Tripwire",
-    "Real Name": "Tormod S. Skoog",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "minesweeper, 3 land mines, mine detector backpack",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Wild Bill",
-    "Real Name": "William S. Hardy",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1983,
-    "Associated Vehicle": "Dragonfly",
-    "Filecard Character Information": null,
+    "Accessories": "Helmet",
     "Has Swivel Arm": true
   }
 ];
