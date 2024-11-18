@@ -17,4 +17,5 @@ export const historicalFigures: FigureData[] = [
   "Associated Vehicle": String(figure["Associated Vehicle"] || ''),
   "Filecard Character Information": String(figure["Filecard Character Information"] || ''),
   "Has Swivel Arm": Boolean(figure["Has Swivel Arm"]),
+  "photoUrl": String(figure["photoUrl"] || '')
 }));
