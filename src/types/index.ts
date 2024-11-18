@@ -15,7 +15,7 @@ export interface FigureData {
   "Version": string | number;
   "USA Year": number;
   "Associated Vehicle": string | number;
-  "Filecard Character Information": string;
+  "Accessories": string;
   "Has Swivel Arm"?: boolean;
   "photoUrl"?: string;
 }
