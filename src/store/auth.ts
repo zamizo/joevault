@@ -1,11 +1,5 @@
 import { create } from 'zustand';
-import { 
-  createUserWithEmailAndPassword, 
-  signInWithEmailAndPassword,
-  signOut as firebaseSignOut,
-  onAuthStateChanged,
-  User
-} from 'firebase/auth';
+import { User } from 'firebase/auth';
 import { auth } from '../config/firebase';
 
 interface AuthState {
@@ -19,13 +13,13 @@ interface AuthState {
 
 export const useAuthStore = create<AuthState>((set) => ({
   user: null,
-  loading: true,
+  loading: false,
   error: null,
 
   signUp: async (email: string, password: string) => {
     try {
       set({ error: null, loading: true });
-      await createUserWithEmailAndPassword(auth, email, password);
+      await auth.createUserWithEmailAndPassword(email, password);
     } catch (error: any) {
       set({ error: error.message });
     } finally {
@@ -36,7 +30,7 @@ export const useAuthStore = create<AuthState>((set) => ({
   signIn: async (email: string, password: string) => {
     try {
       set({ error: null, loading: true });
-      await signInWithEmailAndPassword(auth, email, password);
+      await auth.signInWithEmailAndPassword(email, password);
     } catch (error: any) {
       set({ error: error.message });
     } finally {
@@ -47,7 +41,8 @@ export const useAuthStore = create<AuthState>((set) => ({
   signOut: async () => {
     try {
       set({ error: null, loading: true });
-      await firebaseSignOut(auth);
+      await auth.signOut();
+      set({ user: null });
     } catch (error: any) {
       set({ error: error.message });
     } finally {
@@ -57,6 +52,6 @@ export const useAuthStore = create<AuthState>((set) => ({
 }));
 
 // Set up auth state listener
-onAuthStateChanged(auth, (user) => {
+auth.onAuthStateChanged((user) => {
   useAuthStore.setState({ user, loading: false });
 });
