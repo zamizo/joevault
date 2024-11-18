@@ -11,9 +11,8 @@ export const historicalFigures: FigureData[] = [
     "Version": "1 (Mail-in)",
     "USA Year": 1982,
     "Associated Vehicle": "",
-    "Filecard Character Information": "\"Venom\" laser pistol",
-    "Has Swivel Arm": false,
-    "photoUrl": "/src/assets/images/figures/1982/cobra-commander-v1.png"
+    "Accessories": "\"Venom\" laser pistol",
+    "Has Swivel Arm": false
   },
   {
     "Code Name": "Cobra Officer",
@@ -24,9 +23,8 @@ export const historicalFigures: FigureData[] = [
     "Version": "1",
     "USA Year": 1982,
     "Associated Vehicle": "",
-    "Filecard Character Information": "AK-47 assault rifle",
-    "Has Swivel Arm": false,
-    "photoUrl": "/src/assets/images/figures/1982/cobra-officer-v1.png"
+    "Accessories": "AK-47 assault rifle",
+    "Has Swivel Arm": false
   },
   {
     "Code Name": "Cobra Trooper",
@@ -37,9 +35,8 @@ export const historicalFigures: FigureData[] = [
     "Version": "1",
     "USA Year": 1982,
     "Associated Vehicle": "",
-    "Filecard Character Information": "Dragunov (SVD) sniper's rifle",
-    "Has Swivel Arm": false,
-    "photoUrl": "/src/assets/images/figures/1982/cobra-trooper-v1.png"
+    "Accessories": "Dragunov (SVD) sniper's rifle",
+    "Has Swivel Arm": false
   },
   {
     "Code Name": "Breaker",
@@ -50,9 +47,8 @@ export const historicalFigures: FigureData[] = [
     "Version": "1",
     "USA Year": 1982,
     "Associated Vehicle": "",
-    "Filecard Character Information": "TV-Radio back pack, helmet, communications headset",
-    "Has Swivel Arm": false,
-    "photoUrl": "/src/assets/images/figures/1982/breaker-v1.png"
+    "Accessories": "TV-Radio back pack, helmet, communications headset",
+    "Has Swivel Arm": false
   },
   {
     "Code Name": "Clutch",
@@ -63,8 +59,7 @@ export const historicalFigures: FigureData[] = [
     "Version": "1",
     "USA Year": 1982,
     "Associated Vehicle": "Vamp",
-    "Filecard Character Information": "Helmet",
-    "Has Swivel Arm": false,
-    "photoUrl": "/src/assets/images/figures/1982/clutch-v1.png"
+    "Accessories": "Helmet",
+    "Has Swivel Arm": false
   }
 ];
