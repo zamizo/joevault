@@ -11,7 +11,8 @@ export const figures1982: FigureData[] = [
     "USA Year": 1982,
     "Associated Vehicle": null,
     "Filecard Character Information": "\"Venom\" laser pistol",
-    "Has Swivel Arm": false
+    "Has Swivel Arm": false,
+    "photoUrl": "/src/assets/images/figures/1982/cobra-commander-v1.png"
   },
   {
     "Code Name": "Cobra Officer",
@@ -23,19 +24,8 @@ export const figures1982: FigureData[] = [
     "USA Year": 1982,
     "Associated Vehicle": null,
     "Filecard Character Information": "AK-47 assault rifle",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Cobra Officer",
-    "Real Name": "Various",
-    "Series": "A Real American Hero",
-    "Allegiance": "Cobra",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "AK-47 assault rifle",
-    "Has Swivel Arm": true
+    "Has Swivel Arm": false,
+    "photoUrl": "/src/assets/images/figures/1982/cobra-officer-v1.png"
   },
   {
     "Code Name": "Cobra Trooper",
@@ -47,19 +37,8 @@ export const figures1982: FigureData[] = [
     "USA Year": 1982,
     "Associated Vehicle": null,
     "Filecard Character Information": "Dragunov (SVD) sniper's rifle",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Cobra Trooper",
-    "Real Name": "Various",
-    "Series": "A Real American Hero",
-    "Allegiance": "Cobra",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "Dragunov (SVD) sniper's rifle",
-    "Has Swivel Arm": true
+    "Has Swivel Arm": false,
+    "photoUrl": "/src/assets/images/figures/1982/cobra-trooper-v1.png"
   },
   {
     "Code Name": "Breaker",
@@ -71,19 +50,8 @@ export const figures1982: FigureData[] = [
     "USA Year": 1982,
     "Associated Vehicle": null,
     "Filecard Character Information": "TV-Radio back pack, helmet, communications headset",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Breaker",
-    "Real Name": "Alvin R. Kibbey",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "TV-Radio back pack, helmet, communications headset",
-    "Has Swivel Arm": true
+    "Has Swivel Arm": false,
+    "photoUrl": "/src/assets/images/figures/1982/breaker-v1.png"
   },
   {
     "Code Name": "Clutch",
@@ -95,282 +63,7 @@ export const figures1982: FigureData[] = [
     "USA Year": 1982,
     "Associated Vehicle": "Vamp",
     "Filecard Character Information": "Helmet",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Clutch",
-    "Real Name": "Lance J. Steinberg",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": "Vamp",
-    "Filecard Character Information": "Helmet",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Flash",
-    "Real Name": "Anthony S. Gambello",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1982,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "XMLR-1A (shoulder-fired laser rifle), power pack, helmet, visor",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Flash",
-    "Real Name": "Anthony S. Gambello",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "XMLR-1A (shoulder-fired laser rifle), power pack, helmet, visor",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Grand Slam",
-    "Real Name": "James J. Barney",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1982,
-    "Associated Vehicle": "HAL",
-    "Filecard Character Information": "helmet, visor",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Grand Slam",
-    "Real Name": "James J. Barney",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": "HAL",
-    "Filecard Character Information": "helmet, visor",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Grunt",
-    "Real Name": "Robert W. Graves",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1982,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "M-16 rifle, combat pack, helmet",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Grunt",
-    "Real Name": "Robert W. Graves",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "M-16 rifle, combat pack, helmet",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Hawk",
-    "Real Name": "Clayton M. Abernathy",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1982,
-    "Associated Vehicle": "MMS",
-    "Filecard Character Information": "helmet, visor",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Hawk",
-    "Real Name": "Clayton M. Abernathy",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": "MMS",
-    "Filecard Character Information": "helmet, visor",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Rock 'n Roll",
-    "Real Name": "Craig S. McConnel",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1982,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "heavy machine gun, bipod, helmet",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Rock 'n Roll",
-    "Real Name": "Craig S. McConnel",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "heavy machine gun, bipod, helmet",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Scarlett",
-    "Real Name": "Shana M. O'Hara",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1982,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "XK-1 power crossbow",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Scarlett",
-    "Real Name": "Shana M. O'Hara",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "XK-1 power crossbow",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Short-Fuze",
-    "Real Name": "Eric W. Freistadt",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1982,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "M-1 (81mm medium mortar), bipod, ammo pack, helmet (with visor)",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Short-Fuze",
-    "Real Name": "Eric W. Freistadt",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "M-1 (81mm medium mortar), bipod, ammo pack, helmet (with visor)",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Snake Eyes",
-    "Real Name": "Classified",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1982,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "Uzi gun, explosives pack",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Snake Eyes",
-    "Real Name": "Classified",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "Uzi gun, explosives pack",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Stalker",
-    "Real Name": "Lonzo R. Wilkinson",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1982,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "M-32 \"Pulverizer\" sub-machine gun",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Stalker",
-    "Real Name": "Lonzo R. Wilkinson",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "M-32 \"Pulverizer\" sub-machine gun",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Steeler",
-    "Real Name": "Ralph W. Pulaski",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1982,
-    "Associated Vehicle": "MOBAT",
-    "Filecard Character Information": "Uzi gun, headset (helmet/binoculars/camera)",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Steeler",
-    "Real Name": "Ralph W. Pulaski",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": "MOBAT",
-    "Filecard Character Information": "Uzi gun, headset (helmet/binoculars/camera)",
-    "Has Swivel Arm": true
-  },
-  {
-    "Code Name": "Zap",
-    "Real Name": "Rafael J. Melendez",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": 1,
-    "USA Year": 1982,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "Bazooka, ammo pack, helmet",
-    "Has Swivel Arm": false
-  },
-  {
-    "Code Name": "Zap",
-    "Real Name": "Rafael J. Melendez",
-    "Series": "A Real American Hero",
-    "Allegiance": "G.I. Joe",
-    "Sub Team": null,
-    "Version": "1.5",
-    "USA Year": 1983,
-    "Associated Vehicle": null,
-    "Filecard Character Information": "Bazooka, ammo pack, helmet",
-    "Has Swivel Arm": true
+    "Has Swivel Arm": false,
+    "photoUrl": "/src/assets/images/figures/1982/clutch-v1.png"
   }
 ];
