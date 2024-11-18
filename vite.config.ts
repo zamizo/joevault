@@ -9,5 +9,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  publicDir: false, // Disable the public directory since we're using assets in src
+  optimizeDeps: {
+    exclude: ['lucide-react'],
+  },
 });
