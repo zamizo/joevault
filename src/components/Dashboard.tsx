@@ -1,10 +1,11 @@
 import React from 'react';
 import { useCollectionStore } from '../store';
-import { PieChart, BarChart2, Package, Users } from 'lucide-react';
+import { PieChart, BarChart2, Package, Users, Plus, Pencil, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ActivityType } from '../types';
 
 export function Dashboard() {
-  const { figures, accessories, vehicles, playsets } = useCollectionStore();
+  const { figures, accessories, vehicles, playsets, recentActivity } = useCollectionStore();
 
   const stats = [
     { name: 'Total Figures', value: figures.length, icon: Users, href: '/figures' },
@@ -12,6 +13,46 @@ export function Dashboard() {
     { name: 'Total Vehicles', value: vehicles.length, icon: BarChart2, href: '/vehicles' },
     { name: 'Total Playsets', value: playsets.length, icon: PieChart, href: '/playsets' },
   ];
+
+  const getActivityIcon = (type: ActivityType) => {
+    switch (type) {
+      case 'add':
+        return <Plus className="h-5 w-5 text-green-500" />;
+      case 'update':
+        return <Pencil className="h-5 w-5 text-blue-500" />;
+      case 'remove':
+        return <Trash2 className="h-5 w-5 text-red-500" />;
+    }
+  };
+
+  const getActivityMessage = (activity: typeof recentActivity[0]) => {
+    const action = {
+      add: 'Added',
+      update: 'Updated',
+      remove: 'Removed',
+    }[activity.type];
+
+    return `${action} ${activity.itemType} "${activity.itemName}"`;
+  };
+
+  const formatTimestamp = (timestamp: number) => {
+    const date = new Date(timestamp);
+    const now = new Date();
+    const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+
+    if (diffInSeconds < 60) {
+      return 'just now';
+    } else if (diffInSeconds < 3600) {
+      const minutes = Math.floor(diffInSeconds / 60);
+      return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+    } else if (diffInSeconds < 86400) {
+      const hours = Math.floor(diffInSeconds / 3600);
+      return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+    } else {
+      const days = Math.floor(diffInSeconds / 86400);
+      return `${days} day${days > 1 ? 's' : ''} ago`;
+    }
+  };
 
   return (
     <div>
@@ -55,7 +96,43 @@ export function Dashboard() {
         <h3 className="text-lg font-medium text-gray-900 mb-4">
           Recent Activity
         </h3>
-        <p className="text-gray-500">No recent activity to display.</p>
+        {recentActivity.length === 0 ? (
+          <p className="text-gray-500">No recent activity to display.</p>
+        ) : (
+          <div className="flow-root">
+            <ul className="-mb-8">
+              {recentActivity.map((activity, activityIdx) => (
+                <li key={activity.id}>
+                  <div className="relative pb-8">
+                    {activityIdx !== recentActivity.length - 1 ? (
+                      <span
+                        className="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200"
+                        aria-hidden="true"
+                      />
+                    ) : null}
+                    <div className="relative flex space-x-3">
+                      <div>
+                        <span className="h-8 w-8 rounded-full bg-gray-100 flex items-center justify-center">
+                          {getActivityIcon(activity.type)}
+                        </span>
+                      </div>
+                      <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
+                        <div>
+                          <p className="text-sm text-gray-500">
+                            {getActivityMessage(activity)}
+                          </p>
+                        </div>
+                        <div className="whitespace-nowrap text-right text-sm text-gray-500">
+                          {formatTimestamp(activity.timestamp)}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
