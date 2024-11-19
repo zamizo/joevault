@@ -12,7 +12,7 @@ import placeholderImage from '@/assets/images/placeholder-figure.svg';
 type ViewMode = 'grid' | 'list';
 
 export function FiguresList() {
-  const { figures, addFigure } = useCollectionStore();
+  const { figures, addFigure, deleteFigure } = useCollectionStore();
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [editingFigure, setEditingFigure] = useState<any>(null);
   const [yearFilter, setYearFilter] = useState<number | null>(null);
@@ -21,7 +21,6 @@ export function FiguresList() {
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
 
   const displayFigures = useMemo(() => {
-    // Combine user figures and historical figures
     const allFigures = [
       ...figures.map(f => ({ ...f, isHistorical: false })),
       ...historicalFigures
@@ -100,6 +99,12 @@ export function FiguresList() {
 
   const handleEdit = (figure: any) => {
     setEditingFigure(figure);
+  };
+
+  const handleRemoveFromCollection = (figureId: string) => {
+    if (window.confirm('Are you sure you want to remove this figure from your collection?')) {
+      deleteFigure(figureId);
+    }
   };
 
   const getFigureImage = (figure: any) => {
@@ -242,12 +247,20 @@ export function FiguresList() {
                               Add to Collection
                             </button>
                           ) : (
-                            <button
-                              className="text-indigo-600 hover:text-indigo-900"
-                              onClick={() => handleEdit(figure)}
-                            >
-                              Edit
-                            </button>
+                            <div className="flex flex-col items-end space-y-1">
+                              <button
+                                className="text-indigo-600 hover:text-indigo-900"
+                                onClick={() => handleEdit(figure)}
+                              >
+                                Edit
+                              </button>
+                              <button
+                                className="text-red-600 hover:text-red-900"
+                                onClick={() => handleRemoveFromCollection(figure.id)}
+                              >
+                                Remove
+                              </button>
+                            </div>
                           )}
                         </td>
                       </tr>
@@ -282,7 +295,7 @@ export function FiguresList() {
                   <p className="text-sm text-gray-500">Year: {figure.usaYear}</p>
                   <p className="text-sm text-gray-500">Status: {figure.collectionStatus}</p>
                 </div>
-                <div className="mt-4">
+                <div className="mt-4 space-y-2">
                   {figure.isHistorical ? (
                     <button
                       className="w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
@@ -291,12 +304,20 @@ export function FiguresList() {
                       Add to Collection
                     </button>
                   ) : (
-                    <button
-                      className="w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-                      onClick={() => handleEdit(figure)}
-                    >
-                      Edit
-                    </button>
+                    <>
+                      <button
+                        className="w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+                        onClick={() => handleEdit(figure)}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700"
+                        onClick={() => handleRemoveFromCollection(figure.id)}
+                      >
+                        Remove from Collection
+                      </button>
+                    </>
                   )}
                 </div>
               </div>
