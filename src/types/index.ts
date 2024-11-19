@@ -5,6 +5,15 @@ export type Condition = 'Mint' | 'Good' | 'Normal Wear' | 'Below Average' | 'Bea
 export type JointCondition = 'Tight' | 'Normal' | 'Slightly Loose' | 'Very Loose';
 export type ScrewCondition = 'Good' | 'Rusty' | 'Striped';
 export type PackageType = 'Carded' | 'Packaged with Vehicle' | 'Packaged with Playset';
+export type ActivityType = 'add' | 'update' | 'remove';
+
+export interface Activity {
+  id: string;
+  type: ActivityType;
+  itemType: 'figure' | 'accessory' | 'vehicle' | 'playset';
+  itemName: string;
+  timestamp: number;
+}
 
 export interface FigureData {
   "Code Name": string;
