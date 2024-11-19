@@ -9,7 +9,7 @@ interface EditFigureFormProps {
 }
 
 export function EditFigureForm({ onClose, figure }: EditFigureFormProps) {
-  const updateFigure = useCollectionStore((state) => state.updateFigure);
+  const { updateFigure, deleteFigure } = useCollectionStore();
   const [formData, setFormData] = useState({
     codeName: figure.codeName,
     realName: figure.realName || '',
@@ -54,6 +54,14 @@ export function EditFigureForm({ onClose, figure }: EditFigureFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // If status changed to "Not Owned", remove from collection
+    if (formData.collectionStatus === 'Not Owned' && figure.collectionStatus !== 'Not Owned') {
+      deleteFigure(figure.id);
+      onClose();
+      return;
+    }
+
     // Update photoUrl to use the first uploaded photo if available
     const updatedData = {
       ...formData,
@@ -70,6 +78,16 @@ export function EditFigureForm({ onClose, figure }: EditFigureFormProps) {
       // Update photoUrl immediately when photos change
       photoUrl: photos.length > 0 ? photos[0] : prev.photoUrl
     }));
+  };
+
+  const handleCollectionStatusChange = (status: CollectionStatus) => {
+    if (status === 'Not Owned') {
+      if (window.confirm('Changing status to "Not Owned" will remove this figure from your collection. Are you sure?')) {
+        setFormData({ ...formData, collectionStatus: status });
+      }
+    } else {
+      setFormData({ ...formData, collectionStatus: status });
+    }
   };
 
   return (
@@ -199,7 +217,7 @@ export function EditFigureForm({ onClose, figure }: EditFigureFormProps) {
             <select
               id="collectionStatus"
               value={formData.collectionStatus}
-              onChange={(e) => setFormData({ ...formData, collectionStatus: e.target.value as CollectionStatus })}
+              onChange={(e) => handleCollectionStatusChange(e.target.value as CollectionStatus)}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
             >
               <option value="Not Owned">Not Owned</option>
